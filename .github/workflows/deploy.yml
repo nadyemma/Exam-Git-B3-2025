@@ -1,0 +1,19 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Afficher messages de déploiement
+        run: |
+          echo "Début du déploiement!"
+          echo "Valeur du secret masquée : *** (c'est normal)."
+          echo "Déploiement terminé par GWATHER Oscar."  
